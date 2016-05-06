@@ -214,4 +214,30 @@ Multiple <source> elements can link to different audio files. The browser will u
 <audio autoplay controls loop>  plays and controls  and loops
 
 
+----------------html5 canvas.....
+
+The HTML <canvas> element is used to draw graphics on a web page.
+
+The graphic to the left is created with <canvas>. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text.
+
+A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.
+
+The markup looks like this:
+
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
+HTML5 has brought some exciting new advantages to the HTML coding world. Canvas allows you to render graphics powered by Javascript. So throw away that flash code and dive into Canvas
+
+you can use canvas ---to overlay on a video from a page...so that you get bubbles and kind of stuff like that...
+need to use javascript for that..
+
+
+
+HTML5 provides much needed UI enhancements...
+audio, video and canvas provide simple fallback behaviors
+
+------------------new form inputs html5 
+overview of html forms..
+demonstrate upgrade scenario...
+
 

@@ -209,5 +209,9 @@ Text between the <audio> and </audio> tags will display in browsers that do not 
 Multiple <source> elements can link to different audio files. The browser will use the first recognized format.
 
 
+<audio controls>  just gives controls 
+<audio autoplay controls>  plays and controls 
+<audio autoplay controls loop>  plays and controls  and loops
+
 
 

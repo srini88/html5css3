@@ -99,5 +99,82 @@ upgrade your shit to semantic tags..
 
 summary...
 
+The <main> tag specifies the main content of a document.
+
+The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.
+
+Note: There must not be more than one <main> element in a document. The <main> element must NOT be a descendant of an <article>, <aside>, <footer>, <header>, or <nav> element.
 
 
+<!DOCTYPE html>
+<html>
+<body>
+
+<main>
+  <h1>Web Browsers</h1>
+  <p>Google Chrome, Firefox, and Internet Explorer are the most used browsers today.</p>
+
+  <article>
+    <h1>Google Chrome</h1>
+    <p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+  </article>
+
+  <article>
+    <h1>Internet Explorer</h1>
+    <p>Internet Explorer is a free web browser from Microsoft, released in 1995.</p>
+  </article>
+
+  <article>
+    <h1>Mozilla Firefox</h1>
+    <p>Firefox is a free, open-source web browser from Mozilla, released in 2004.</p>
+  </article>
+</main>
+
+<p><strong>Note:</strong> The main tag is not supported in Internet Explorer 11 and earlier versions.</p>
+
+</body>
+</html>
+
+
+<body>
+
+	<header>My page</header>
+	
+	<nav>
+		<a href="#">Home</a>
+	</nav>
+	
+	<main>
+		<article>
+			<h1>My article</h1>
+			<p>Content</p>
+		</article>
+	
+		<aside>
+			<p>More information</p>
+		</aside>
+	</main>
+	
+	<footer>Copyright 2013</footer>
+
+</body>
+
+
+<body>
+<header role="banner">
+[...]
+</header>
+
+<main id="content" class="group" role="main">
+[...]
+</main>
+
+<footer role="contentinfo">
+    [...]
+</footer>
+</body>
+
+Just as with the introduction of many other new HTML5 elements, not all browsers recognise <main> or have preset styles for it. You’ll need to ensure it displays as a block level element in your CSS:
+
+
+main {display:block;}

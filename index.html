@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset ="utf-8" />
 	<title>HTML5 and CSS3</title>
 </head>
 <body>
 
-<div id="header">
+<header>
 	<h1>Semantics Demo</h1>
-	<div class="subheader">Understanding the meaning of data</div>
-	<div class="nav">
-		<h2>Page Navigation</h2>
+	<h2>Understanding the meaning of data</h2>
+	<nav>  <!-- semantic tag -->
+		<h1>Page Navigation</h1>  <!-- this h1 is weighted relatively to nav -->
 		<ul>
 			<li><a href="#">First Link </a></li>
 			<li><a href="#">Second Link </a></li>
 			<li><a href="#">Third Link </a></li>
 
 		</ul>
-	</div>
-</div>
+	</nav>
+</header>
 
-<div id ="article">
-	<h2>The main content inside article</h2>
+<article>
+	<h1>The main content inside article</h1>
 	<p>Im awesome paragraph</p>
 
-	<div class="aside">
-		<h3>Side Note inside aside</h3>
+	<aside>
+		<h1>Side Note inside aside</h1>
 		<p> aside awesome paragraph</p>
-	</div>
-</div>
+	</aside>
+</article>
 
-<div id ="footer">
+<footer>
 	<p>This is footer shit</p>
-</div>
+</footer>
 
 
 

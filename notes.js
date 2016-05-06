@@ -294,4 +294,56 @@ therefore the best option is to use <hr />, which is always valid.
 
 
 forms new input types -- 
+<label for="email-data">Email : </label>
+<input type="email" id="email-data"  required multiple/>
 
+will take more than 1 email address 
+
+
+The <datalist> tag specifies a list of pre-defined options for an <input> element.
+
+The <datalist> tag is used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as they input data.
+
+Use the <input> element's list attribute to bind it together with a <datalist> element.
+
+<label>Choose a browser from this list:
+<input list="browsers" name="myBrowser" /></label>
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+  <option value="Microsoft Edge">
+</datalist>  list and id should match
+
+
+progress bar and meter tags 
+to mark up the completion rate ⁄ degree of progress of an "in progress" task through a progress bar, use progress element 
+to represent a gauge use meter element 
+
+you can think like that: progress = dynamic ; meter = static 
+
+
+----in html5 you can have controls outside the form and make it behave inside the form 
+
+bind it with the form property - and give the form name --- when you submit the form this shit also gets submitted along with it...
+
+<input type = "text"  form="idofForm">
+
+support of audio and video -- acts as a replacement as plugins 
+
+
+src , controls, autoplay, loop - loops 
+poster - takes a url - displayed until the video begins. 
+preload - allow for precaching.. , none, metadata, auto(Default)
+
+pster property - you will see the initial image - the thumbnail of the poster...
+
+
+canvas API creates a drawing serface - within the browser...
+
+canvas elemtn ----- 2d vs 3d webgll --- webgl only in brwosers that implement webgl library...
+
+
+rectangle - stroke, fill , clear

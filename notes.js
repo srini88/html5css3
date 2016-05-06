@@ -241,3 +241,57 @@ overview of html forms..
 demonstrate upgrade scenario...
 
 
+---------------------------HTML5  scratch -----------------
+
+semantic markup --  doctype enormously simplified...
+<!DOCTYPE html> will work for all goddamn revisions...not only html5
+
+structural elements ---
+<header>
+<hgroup>
+<footer>  you can have more than one footer on the page - nearest ancestor secitoning content ..
+article   --- should be self contained cocument, page...etc..could be independetly distributed...
+
+section - section a page into subject area -- section do not create a standalone documents.........one article with 2 seconds...
+
+
+aside  -- sidebars --- related to but not part of the main flow..
+
+nav  - used to mark navigation sections..
+
+fat header - header and subheader - use hgroup ..
+
+mark -- used to highlight a section of text...
+
+time - 
+
+Changed elements --- 
+address tag -- 
+cite - 
+dl dt and dd 
+em and i tag --- em when you are subtly stressing..
+
+
+
+<hr></hr> is actually a valid XHTML 1.0, too.
+
+So, for XHTML 1.0:
+
+<hr /> is valid
+<hr></hr> is valid
+<hr> is not valid
+... for HTML 4.0:
+
+<hr /> is valid
+<hr></hr> is not valid
+<hr> is valid
+therefore the best option is to use <hr />, which is always valid.
+
+
+<s> tag strike through ..
+<strong> imdicates importance...
+<b> indicates bold without indicating importance...
+
+
+forms new input types -- 
+

@@ -8,16 +8,21 @@
 <body>
 
 <header>
-	<h1>DEMO Video HTML5</h1>
+	<h1>DEMO Canvas HTML5</h1>
 	
 </header>
 
-<video autoplay controls>
+<!-- you see width and height in the invisible box -->
+<!-- canvas gonna need a script -->
+<canvas id="demoCanvas" width="400" height ="400">
 	
-<source src="video.mp4" />
-	Your video is shit , this browser does not accept shit ! 
-</video>
 
+
+
+	Your browser does not support shit
+
+
+</canvas>
 
 
 
@@ -25,6 +30,24 @@
 <footer>
 	<p>This is footer shit</p>
 </footer>
+
+<script>
+	
+(function(){
+	var demoCanvas = document.getElementById("demoCanvas");
+	var ctx = demoCanvas.getContext("2d"); //2d drawing context
+	//console.log(ctx);  //CanvasRenderingContext2D {canvas: canvas#demoCanvas, globalAlpha: 1, globalCompositeOperation: "source-over", webkitImageSmoothingEnabled: true, imageSmoothingEnabled: true…}
+	//console.log(demoCanvas);
+	ctx.fillStyle = "rgb(0,0,255)";  //blue
+	ctx.fillRect(30,30,200,100);   //last 2 width and height
+	ctx.fillStyle = "rgb(255, 0, 0)"; //red
+	ctx.arc(100,100, 30, 0, 2 * Math.PI, true);
+	ctx.fill();
+
+})();
+
+
+</script>
 
 </body>
 </html>

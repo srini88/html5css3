@@ -178,3 +178,36 @@ Just as with the introduction of many other new HTML5 elements, not all browsers
 
 
 main {display:block;}
+
+-----------chapter 2----------------
+
+audio, video , canvas (animations through canvass..,  
+before you got to use plugins for this stuff...
+
+<audio>
+<source src="thaimai.mp3">
+</audio>
+
+
+benefit of using source element instead..one audio file in one browser..
+browser will ignore any sourece that it does not understand..
+
+this browser does not support HTML5 audio..
+
+Before HTML5, there was no standard for playing audio files on a web page.
+
+Before HTML5, audio files could only be played with a plug-in (like flash).
+
+The HTML5 <audio> element specifies a standard way to embed audio in a web page.
+
+
+
+The controls attribute adds audio controls, like play, pause, and volume.
+
+Text between the <audio> and </audio> tags will display in browsers that do not support the <audio> element.
+
+Multiple <source> elements can link to different audio files. The browser will use the first recognized format.
+
+
+
+

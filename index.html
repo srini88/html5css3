@@ -1,34 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset ="utf-8" />
-	<title>HTML5 and CSS3</title>
+	<title>Demo Audio using HTML5</title>
 </head>
 <body>
 
 <header>
-	<h1>Semantics Demo</h1>
-	<h2>Understanding the meaning of data</h2>
-	<nav>  <!-- semantic tag -->
-		<h1>Page Navigation</h1>  <!-- this h1 is weighted relatively to nav -->
-		<ul>
-			<li><a href="#">First Link </a></li>
-			<li><a href="#">Second Link </a></li>
-			<li><a href="#">Third Link </a></li>
-
-		</ul>
-	</nav>
+	<h1>DEMO Audio HTML5</h1>
+	
 </header>
 
-<article>
-	<h1>The main content inside article</h1>
-	<p>Im awesome paragraph</p>
 
-	<aside>
-		<h1>Side Note inside aside</h1>
-		<p> aside awesome paragraph</p>
-	</aside>
-</article>
+<!-- we not getting visual representation of the audio -->
+
+<audio controls="">
+<source src="thaimai.mp3" />
+This browser does not support HTML5 audio !   <!-- on IE I'm seeing this message, FF,and chrome , no message and does not play until you add autoplay to audio -->
+</audio>
 
 <footer>
 	<p>This is footer shit</p>

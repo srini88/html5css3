@@ -347,3 +347,7 @@ canvas elemtn ----- 2d vs 3d webgll --- webgl only in brwosers that implement we
 
 
 rectangle - stroke, fill , clear
+
+
+create canvas with id..get the id in JS ...get the context on the id ...2d or 3d ..
+

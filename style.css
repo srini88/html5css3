@@ -17,8 +17,8 @@ footer p {
 	background-color: hotpink;
 }
 
-/*////this takes precedence...even then tag selector p comes next..*/
-#brutal{
+/*/////now the next one overrides and it wil be in red*/*/
+p{
 	background-color: blue;   
 }
 

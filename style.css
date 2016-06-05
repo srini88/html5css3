@@ -12,14 +12,14 @@ body{
 footer p {
 
 }*/
-
-#header {
-	background-color: hotpink;
+ /*will always be green*/
+ p{
+	background-color: green !important;
 }
 
 /*now wont override because of !important*/
 p{
-	background-color: blue !important;      
+	background-color: blue ;      
 }
 
 p{

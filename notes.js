@@ -393,3 +393,26 @@ all browsers apply basic styling to HTML ..margin , padding, font size, underlin
 CSS resets --------------strip browser default styles of different degreess...
 
 SELECTOR and DECLARATION........
+
+<div id="test">
+  <span>Text</span>
+</div>
+div#test span { color: green }
+div span { color: blue }
+span { color: red }
+No matter what the order, the text will be green because that rule is most specific. (Also, the rule for blue overwrites the rule for red, notwithstanding the order of the rules)
+
+Selector Types
+
+The following list of selector types is by increasing specificity:
+
+Type selectors (e.g., h1) and pseudo-elements (e.g., :before).
+Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+ID selectors (e.g., #example).
+Universal selector (*), combinators (+, >, ~, ' ') and negation pseudo-class (:not()) have no effect on specificity. (The selectors declared inside :not() do, however.)
+
+Inline styles added to an element (e.g., style="font-weight:bold") always overwrite any styles in external stylesheets and thus can be thought of as having the highest specificity.
+
+The !important exception
+
+When an important rule is used on a style declaration, this declaration overrides any other declarations. Although technically !important has nothing to do with specificity, it interacts directly with it. Using !important is bad practice and should be avoided because it makes debugging more difficult by breaking the natural cascading in your stylesheets. When two conflicting declarations with the !important rule are applied to the same element, the declaration with greater specificity will be applied.

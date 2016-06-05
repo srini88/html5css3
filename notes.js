@@ -456,8 +456,7 @@ To summarize:
 The browser downloads the CSS file completely.
 The browser doesn't apply any styles to the page when it is downloading. Only after the donwload is complete it starts mapping the rules.
 The rules are applied only during the render tree construction stage.
-Downloading the CSS file doesn't block HTML download. You have to note that the browser
-First downloads all the html files and then style and script files are downloaded.
+Downloading the CSS file doesn't block HTML download. You have to note that the browser First downloads all the html files and then style and script files are downloaded.
 
 
 a{
@@ -468,3 +467,21 @@ a{
 span{
   text-transform :uppercase;
 }
+
+
+if the selectors are identical bottom most rule always wins..
+
+inline style always wins..
+
+
+inheritance --- 
+<body>
+<div></div>
+</body>
+
+if you add back ground clor to body....div also inherits the body color..
+
+all the tags within the body are inheriting the style..
+
+
+if div adds some color - it will override the body color for that div..

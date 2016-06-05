@@ -17,9 +17,9 @@ footer p {
 	background-color: hotpink;
 }
 
-/*/////now the next one overrides and it wil be in red*/*/
+/*now wont override because of !important*/
 p{
-	background-color: blue;   
+	background-color: blue !important;      
 }
 
 p{

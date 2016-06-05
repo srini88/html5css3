@@ -416,3 +416,55 @@ Inline styles added to an element (e.g., style="font-weight:bold") always overwr
 The !important exception
 
 When an important rule is used on a style declaration, this declaration overrides any other declarations. Although technically !important has nothing to do with specificity, it interacts directly with it. Using !important is bad practice and should be avoided because it makes debugging more difficult by breaking the natural cascading in your stylesheets. When two conflicting declarations with the !important rule are applied to the same element, the declaration with greater specificity will be applied.
+
+
+inline --- is with style attribute...
+embedded  is within the head section in the same html file...
+
+externall -- is outside html and use link rel href in the html..
+
+
+If the internal style is defined after the link to the external style sheet, the <h1> elements will be "orange":
+
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style>
+h1 {
+    color: orange;
+}
+</style>
+</head>
+
+
+if I flip internal and external -- external will apply..
+
+  The first and most important thing to understand is that browsers cannot begin painting a page until all CSS is downloaded
+
+Does it apply each rule one-by-one as it parses the stylesheet and render the result progressively? Or, are the CSS file's contents completely downloaded, then fully evaluated, and then applied to the HTML all at once? Or something else?
+Downloads all CSS, then begins painting the document from the top-down.
+
+Testing in Firefox 5, I expected to see green at first, then turn to red. It didn't happen. I tried with two separate stylesheets with conflicting rules and got the same results.
+This is because the CSS is all downloaded first, then when it encountered your element it only applied the red style, because of how the cascade works.
+
+
+I am not sure about the marked answer. I doubt it's correctness. As per this link from Google Developers the browser first downloads the HTML file and when it sees a CSS file linked to external resource it starts downloading the CSS file while it simultaneously creates the DOM structure for the given HTML file as CSS is not going to affect the DOM. Note that it doesn't apply any styles to the document when the browser is downloading the CSS file.
+
+After downloading the CSS file (assume there is no script files) and if the DOM construction is complete, the browser starts mapping the CSS properties to those nodes in the DOM tree. After this it creates another tree called Render tree which builds all the objects which should be displayed, as rectangle boxes. Only after completing the render tree it starts painting on to the screen.
+
+To summarize:
+
+The browser downloads the CSS file completely.
+The browser doesn't apply any styles to the page when it is downloading. Only after the donwload is complete it starts mapping the rules.
+The rules are applied only during the render tree construction stage.
+Downloading the CSS file doesn't block HTML download. You have to note that the browser
+First downloads all the html files and then style and script files are downloaded.
+
+
+a{
+  text-decoration :underline;
+  color :blue;
+}
+
+span{
+  text-transform :uppercase;
+}

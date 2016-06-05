@@ -485,3 +485,27 @@ all the tags within the body are inheriting the style..
 
 
 if div adds some color - it will override the body color for that div..
+
+id  - 100 pts
+class - 10 points
+tag - 1 poiint 
+
+a class cannot override id...
+
+however   you put id = to a div... and the div has p and span..
+#main-content p{
+
+}
+
+//this strong will override...becasue you are explicitly targeting..
+strong {
+
+}
+
+//targeting multiple elements...
+p, span, a {
+
+}
+
+//looked until 14 chapters..
+//https://www.youtube.com/watch?v=3SOf8gZlBhI&index=1#t=232.140604

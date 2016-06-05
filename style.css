@@ -42,3 +42,8 @@ h1{
 	display: block;
 }
 
+a{
+	color :yellow;
+	text-decoration: none;
+	cursor: wait;   /*//awesome  shows the loading roudn windows seven*/
+}

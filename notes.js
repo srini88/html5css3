@@ -351,3 +351,45 @@ rectangle - stroke, fill , clear
 
 create canvas with id..get the id in JS ...get the context on the id ...2d or 3d ..
 
+
+------------------------------------------------------jesse libery---
+cSS from scratch...
+
+p {
+  color : blue;
+}
+
+selector, property and value
+
+
+internal style sheets, external style sheets...(live in a file of their own)
+
+external - faster loading ,,cached... link rel href..use this..
+
+
+html5 - article and section..
+
+browser will make some guesses by default...
+
+inline stypesheet 
+<style>
+
+
+
+</style>
+
+---- Tag selectors....pae wide ....
+--class selector - apply to every element with that class..
+ID selectors - apply to one spelcifi id..
+
+
+.class {
+  backgroundColor : green;
+}
+
+all browsers apply basic styling to HTML ..margin , padding, font size, underlining links....
+= browser apply their own default styles --- to fall back on...
+
+CSS resets --------------strip browser default styles of different degreess...
+
+SELECTOR and DECLARATION........

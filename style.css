@@ -1,4 +1,27 @@
 body{
 
+	color:#000000;
+	font-size: medium;
+	font-family: 'Segoe UI';
+
+
+
+
+}
+/*//any paragraph within a footer
+footer p {
+
+}*/
+
+#header {
+	background-color: hotpink;
 }
 
+/*////this takes precedence...even then tag selector p comes next..*/
+#brutal{
+	background-color: blue;   
+}
+
+p{
+	background-color: red;
+}

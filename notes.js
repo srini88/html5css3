@@ -509,3 +509,122 @@ p, span, a {
 
 //looked until 14 chapters..
 //https://www.youtube.com/watch?v=3SOf8gZlBhI&index=1#t=232.140604
+
+------------------------reading for interview=-----------------
+When working with Angular's $http service, one of the nifty options is a built-in cache service. It's off by default, and enabling this service can prevent repeated requests for the same resource. In this post, I'll compare Angular's service to native HTTP caching in your browser (I used Chrome as a baseline for comparison, and other browsers may differ slightly).
+
+
+
+http://www.metaltoad.com/blog/angularjs-vs-browser-http-cache
+
+
+
+Angular $cacheFactory Browser HTTP cache (Chrome)
+Storage Javascript heap memory (more) disk (more)
+Eviction algorithm  Least recently used (LRU) LRU (more)
+Time-to-live  until page refresh  Determined by HTTP headers
+Support for revalidation  No  Yes, with ETags
+Requires cooperation of 
+remote server No  Yes
+Example 
+$http({
+  method: 'GET',
+  cache: true,
+  url: 'http://date.jsontest.com/
+'})
+Cache-Control: max-age=1800, private
+Vary: Cookie
+Content-Type: application/json
+...
+
+Overall, I'd say the browser has the advantage, but there are many gotchas to look out for with HTTP:
+
+First, the server must be coorperating by sending suitable headers (usually easy if you control the remote resource, rare for third-parties).
+If your resources require authenication, you'll need to set the Vary: header, and Cache-control: private. In the above example cookies are used, but other methods will work. For example if you authenticate with OAuth 2.0, the header would be Vary: Authorization.
+Be careful with proxies, for example Varnish does not support "private" by default.
+When using HTTPS, Chrome and Safari will not cache resources from servers with self-signed certificates. This sometimes makes testing more complicated.
+Safari's implementation of Vary: is broken for cookies, and possibly other headers.
+
+
+
+
+there is another shit called angular cache which is another libreary for imlementing cache in angular shit...
+instead of using angular cache factory..........
+
+angular-cache is probalbly the dopest shit ever...read this http://jmdobry.github.io/angular-cache/guide.html 
+
+
+instad of using default cacheFactory....
+
+
+In a web application if we want to store and retrieve some value in the client browser cookies used to be best solution.  However because of the size limitation of the cookie  HTML5 web storage is the solution that we have presently. Web storage is more faster and secure. The size limit of it is 5MB.
+
+The HTML 5 web storage is natively built into modern browsers. One example of this is below:
+
+//To store values
+ localStorage . setItem("firstName", "Mike");
+//To retrieve values
+var name=localStorage. getItem("firstName");
+//If you print the localStorage now
+console.log(localStorage);
+//The output to the above statement will be
+//Storage {firstName: "Mike", length: 1} 
+
+The local storage data stays in browser even if after you close the browser, so it's not related to the user session. AngularJS has one service called $Cachefactory, which you can use for similar purpose however  it's available to your Angular application only.
+
+ Below is one example for that:
+
+var myCache = $cacheFactory('cache_1');
+myCache.put("lastname", "john");
+
+var lastName = myCache.get("lastname");
+console.log(myCache);
+
+
+ The output to the above statement will be
+
+/** 
+   * Object
+   * id: "cache_12"
+    *size: 1
+*/ 
+
+If your goal is to store client-side and persistent data, you can't use the $cacheFactory, which just caches the data for the current session.
+
+One solution is to use the new local storage API. This awesome Angular module makes all the dirty job for you, and even falls back to cookies for old browsers!
+
+$cacheFactory seems to be clearly NOT your solution, because as Blackhole said, the cache will be cleared each time session expires. $cacheFactory is just a memcache implementation the Angular way.
+
+angular-cache is just an helper API, basically it adds option to $cacheFactory and one of this option is to store cache into persistent storage (like localStorage).
+
+So if you want to store data in persistent storage you can use use one of the module available like angular-local-storage or use $cookieStore but it will create cookies...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
